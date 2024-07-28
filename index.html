@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remex Backup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Remex Backup</h1>
+    <div id="auth-section">
+      <h2>Register</h2>
+      <form id="register-form" method="post" action="/register">
+        <label for="register-username">Username:</label>
+        <input type="text" id="register-username" name="username" required>
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" name="password" required>
+        <button type="submit">Register</button>
+      </form>
+      
+      <h2>Login</h2>
+      <form id="login-form" method="post" action="/login">
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" name="username" required>
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" name="password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div id="form-section" style="display: none;">
+      <h2>Submit Form Data</h2>
+      <form id="data-form" method="post" action="/form">
+        <label for="form-data">Data:</label>
+        <input type="text" id="form-data" name="formData" required>
+        <button type="submit">Submit</button>
+      </form>
+      <button id="logout-button">Logout</button>
+    </div>
+
+    <div id="message"></div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
+
